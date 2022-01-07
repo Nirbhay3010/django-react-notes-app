@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v3xg)f68q0o2zb%6ul4@#dac$dpf!k$4@8mornw2-&t#3_w7p$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['reverent-yonath-9ce664.netlify.app','127.0.0.1']
+ALLOWED_HOSTS = ['reverent-yonath-9ce664.netlify.app','127.0.0.1:3000','localhost']
 
 
 # Application definition
@@ -120,13 +120,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'build/static'
+    BASE_DIR / 'static'
 ]
 
 # Default primary key field type
@@ -134,6 +134,10 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 CORS_ALLOWED_ORIGINS = [
-    "https://reverent-yonath-9ce664.netlify.app/"
+    "http://read.only.com",
+    "http://change.allowed.com",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
