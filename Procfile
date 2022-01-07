@@ -1,3 +1,2 @@
-web: gunicorn notesApp --log-file -
-python manage.py collectstatic --noinput
-manage.py migrate
+release:python manage.py migrate
+web:gunicorn notesApp --log-file -
