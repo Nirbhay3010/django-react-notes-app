@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-v3xg)f68q0o2zb%6ul4@#dac$dpf!k$4@8mornw2-&t#3_w7p$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['reverent-yonath-9ce664.netlify.app','127.0.0.1:3000','localhost']
+# ALLOWED_HOSTS = ['reverent-yonath-9ce664.netlify.app','127.0.0.1:3000','localhost']
 
 
 # Application definition
@@ -133,8 +133,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-
 
 
 CORS_ALLOW_ALL_ORIGINS = True
